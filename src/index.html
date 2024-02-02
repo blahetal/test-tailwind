@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TEST</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/dataformsjs@5/js/react/jsxLoader.min.js"></script>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+    
+    <script type="text/babel" data-type="module">
+        const useState = React.useState;
+        function AdminCustomPage() {
+            const [count, setCount] = useState(0);
+            return (
+                <div>
+                    <div class="font-bold">Admin</div>
+                    <div class="bg-red-700">Help</div>
+                    <div class="bg-red-700">Link</div>
+                    <br />
+                    <div>
+                        <p class="bg-green-700">REACT PLAYGROUND - You clicked {count} times</p>
+                        <button onClick={() => setCount(count + 1)} class="bg bg-red-600">
+                            Click me
+                        </button>
+                    </div>
+                </div>
+            );
+        }
+
+        ReactDOM.render(
+            <AdminCustomPage />,
+            document.getElementById('root')
+        );
+    </script>
+
+    <div id="root"></div>
+</body>
+
+</html>
